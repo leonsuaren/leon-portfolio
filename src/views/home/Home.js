@@ -46,16 +46,16 @@ export const Home = () => {
         <div>
           <Title>{language.greet}</Title>
           <div>
-            <SquareBrakets>[</SquareBrakets> <FullStackTitle> Full Stack Web Developer </FullStackTitle><SquareBrakets>]</SquareBrakets>
+            <SquareBrakets>[</SquareBrakets> <FullStackTitle> {language.slogan} </FullStackTitle><SquareBrakets>]</SquareBrakets>
           </div>
         </div>
         <div>
-          <BioText>I earned a degree in Information Technology and a Master's Degree in Entrepreneurial and Small Business Operations, and I thought that today is the perfect time to update my career and decided to start doing it by taking the Professional
-          Certificate in Coding: Full Stack Developer with MERN on MIT xPro, Why? because I enjoy coding.
-            </BioText>
           <BioText>
-            Outside of work, I love swimming, running, and biking. Or, in other words, "Triathlons". Thriathons have taught me that the path can be difficult, but once you arrive, the reward is enormous.
-            </BioText>
+          {language.elevator}
+          </BioText>
+          <BioText>
+          {language.bio}
+          </BioText>
         </div>
         <div className='links-container'>
           <div>
@@ -67,7 +67,7 @@ export const Home = () => {
           <YouTubelLink className="link-button-style youtube-link" href='#' target='_blank' rel="noreferrer"><AiOutlineYoutube /></YouTubelLink>
         </div>
         <Link to='resume'>
-          <ResumeButton>See my Resume</ResumeButton>
+          <ResumeButton>{language.resume}</ResumeButton>
         </Link>
       </div>
     </main>

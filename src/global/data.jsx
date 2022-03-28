@@ -4,8 +4,11 @@ export const english = {
    contact: 'Contact',
    english: 'En',
    spanish: 'Sp',
-   elevator: 'I earned a degree in Information Technology and a Master\'s Degree in Entrepreneurial and Small Business Operations, and I thought that today is the perfect time to update my career and decided to start doing it by taking the Professional Certificate in Coding: Full Stack Developer with MERN on MIT xPro, Why? because I enjoy coding. Outside of work, I love swimming, running, and biking. Or, in other words, "Triathlons". Thriathons have taught me that the path can be difficult, but once you arrive, the reward is enormous.',
+   slogan: 'Full Stack Web Developer',
+   elevator: 'I earned a degree in Information Technology and a Master\'s Degree in Entrepreneurial and Small Business Operations, and I thought that today is the perfect time to update my career and decided to start doing it by taking the Professional Certificate in Coding: Full Stack Developer with MERN on MIT xPro, Why? because I enjoy coding.',
+   bio: 'Outside of work, I love swimming, running, and biking. Or, in other words, "Triathlons". Thriathons have taught me that the path can be difficult, but once you arrive, the reward is enormous.',
    greet : 'Hi!! I\'m Leon Suarez',
+   resume: 'See my Resume',
    projectsOverview: [
      {name: 'The Pacman', description: 'Create your own pacman and see how goes around the screen', languages: 'JavaScript, HTML, CSS'},
      {name: 'The Eyes Follow You', description: 'See how the Eyes follow your cursor', languages: 'JavaScript, HTML, CSS'},
@@ -23,8 +26,11 @@ export const spanish = {
   contact: 'Contacto',
   english: 'In',
   spanish: 'Es',
-  elevator: 'Tengo una Licenciatura en Informatica Administrativa y una Maestria en Creacion de Microempresas, pense que hoy es el dia perfecto para actualizarme y por eso decidí tomar el curso Professional Certificate in Coding: Full Stack Developer with MERN on MIT xPro, Porqur? porque me gusta programar. Afuera del trabajo, me gusta nadar, correr, y hacer bici. O, en otras palabras, "Triatlones". Los Triatlones me han enseñado que el camino puede ser dificil, pero una vez que llegas ala meta, la satisfaccion es enorme.',
+  slogan: 'Desarrollador Web Full Stack',
+  elevator: 'Tengo una Licenciatura en Informatica Administrativa y una Maestria en Creacion de Microempresas, pense que hoy es el dia perfecto para actualizarme y por eso decidí tomar el curso Professional Certificate in Coding: Full Stack Developer con MERN en MIT xPro, Porque? porque me gusta programar.',
+  bio: 'Afuera del trabajo, me gusta nadar, correr, y hacer bici. O, en otras palabras, "Triatlones". Los Triatlones me han enseñado que el camino puede ser dificil, pero una vez que llegas ala meta, la satisfaccion es enorme.',
   greet : 'Hola! Me llamo León Suárez',
+  resume: 'Ver Curriculum',
   projectsOverview: [
     {name: 'Pacman', description: 'Crea tu Pacman y velo interactuar en la pantalla', languages: 'JavaScript, HTML, CSS'},
     {name: 'Los ojos te siguen', description: 'Ve como los ojos siguen el cursor', languages: 'JavaScript, HTML, CSS'},
@@ -33,5 +39,5 @@ export const spanish = {
  ],
   projectButton: 'Acerca de este Proyecto',
   contactTitle: 'Contacto',
-  contactSlogan: 'Ponte en contacto, Podemos programar juntos!!'
+  contactSlogan: 'Ponte en contacto, Podemos programar algo juntos!!'
 }

@@ -1,10 +1,14 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useContext} from 'react';
 import anime from 'animejs';
 import { paginationAnimation } from '../../global';
 import { Title, SquareBrakets, FullStackTitle, ContactLayout, Mail } from './styled';
 import { ContactCard } from '../../components/card';
 
+import { LanguageContext } from '../../context';
+
 export const Contact = () => {
+  const languageContext = useContext(LanguageContext);
+  const language = languageContext.language;
 
   useEffect(() => {
     paginationAnimation();
@@ -27,9 +31,9 @@ export const Contact = () => {
     <div className="container page-animation animation">
       <div className="p-3 pb-md-4 mx-auto text-center contactSlogan">
         <div>
-          <Title>Contact Me</Title>
+          <Title>{language.contactTitle}</Title>
           <div>
-            <SquareBrakets>[</SquareBrakets> <FullStackTitle> Get in touch, we can code something together!! </FullStackTitle><SquareBrakets>]</SquareBrakets>
+            <SquareBrakets>[</SquareBrakets> <FullStackTitle> {language.contactSlogan} </FullStackTitle><SquareBrakets>]</SquareBrakets>
           </div>
         </div>
       </div>

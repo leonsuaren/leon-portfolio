@@ -8,7 +8,6 @@ import { ToggleButton } from '../../components/toggle-button';
 export const Menu = () => {
   const languageContext = useContext(LanguageContext);
   const language = languageContext.language;
-  console.log(language);
   const { pathname } = useLocation();
 
   return (
@@ -17,9 +16,9 @@ export const Menu = () => {
         <h1><SquareBrakets>[</SquareBrakets><Name> R. Leon Suarez </Name><SquareBrakets>]</SquareBrakets></h1>
       </LinkTo>
       <nav className="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-        <LinkTo isActive={pathname === "/"} to='/' className="me-3 py-2 text-dark text-decoration-none">Home</LinkTo>
-        <LinkTo isActive={pathname === "/projects"} to='projects' className="me-3 py-2 text-dark text-decoration-none">Projects</LinkTo>
-        <LinkTo isActive={pathname === "/contact"} to='contact' className="me-3 py-2 text-dark text-decoration-none">Contact</LinkTo>
+        <LinkTo isActive={pathname === "/"} to='/' className="me-3 py-2 text-dark text-decoration-none">{language.home}</LinkTo>
+        <LinkTo isActive={pathname === "/projects"} to='projects' className="me-3 py-2 text-dark text-decoration-none">{language.projects}</LinkTo>
+        <LinkTo isActive={pathname === "/contact"} to='contact' className="me-3 py-2 text-dark text-decoration-none">{language.contact}</LinkTo>
         <PipeWrapper>|</PipeWrapper>
         <div className="me-3 py-2">
           <ToggleButton />

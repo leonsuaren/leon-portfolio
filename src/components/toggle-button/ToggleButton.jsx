@@ -17,7 +17,7 @@ export const ToggleButton = () => {
       <Span className='me-3 py-2'>En</Span>
       <Toggle onClick={onSwitch}>
       <Notch  isActive={isActive}>
-        <Img src={isActive ? 'mex-flag.jpg' : 'usa-flag.jpeg'}/>
+        <Img src={isActive ? 'mex-flag.jpeg' : 'usa-flag.jpg'}/>
       </Notch>
       </Toggle>
       <Span className='me-3 py-2'>Sp</Span>

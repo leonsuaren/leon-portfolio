@@ -41,7 +41,7 @@ export const Contact = () => {
         <ContactCard onMouseEnter={() => handleAnimationEnter('.email')} onMouseLeave={() => handleAnimationLeave('.email')} className="card email" color='#6270ea' image='gmail.png'>leonsua@gmail.com</ContactCard>
         <ContactCard onMouseEnter={() => handleAnimationEnter('.phone')} onMouseLeave={() => handleAnimationLeave('.phone')} className="card phone" color='#59c49a' image='phone.png'>(937) - 424 6188</ContactCard>
         <ContactCard onMouseEnter={() => handleAnimationEnter('.linked-in')} onMouseLeave={() => handleAnimationLeave('.linked-in')} className="card linked-in" color='#fee28b' image='linkedin.png'>
-        <a href='#'>LinkedIn</a>
+        <a href='http://www.linkedin.com/in/leon-suarez'>LinkedIn</a>
         </ContactCard>
         <ContactCard onMouseEnter={() => handleAnimationEnter('.facebook')} onMouseLeave={() => handleAnimationLeave('.facebook')} className="card facebook" color='#f74242' image='facebook.png'>
         <a href='#'>Facebook</a>

@@ -37,7 +37,7 @@ export const spanish = {
     {name: 'Bus en tiempo real', description: 'Mapa interactivo de una ciudad en L.A', languages: 'JavaScript, HTML, CSS'},
     {name: 'Peliculas', description: 'Encuentra tu pelicula favorita y su contenido', languages: 'Proyecto Full Stack con MERN y Bootstrap'},
  ],
-  projectButton: 'Acerca de este Proyecto',
+  projectButton: 'Detalles',
   contactTitle: 'Contacto',
   contactSlogan: 'Ponte en contacto, Podemos programar algo juntos!!'
 }

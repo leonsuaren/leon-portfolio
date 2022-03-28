@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { CardStyle, Folder, IconContainer, LikeIcon, ShareIcon, CopyIcon, Buttons, ProjectImage, Header, Body, ContactCardStyle, TextContent, ContactFolder, IconWraper, Img } from './styled';
+import { LanguageContext } from '../../context';
 
 export const Card = ({ children, title, languages, description, color, githubRef, ...props }) => {
+  const languageContext = useContext(LanguageContext);
+  const language = languageContext.language;
+
+
   return (
     <CardStyle color={color} {...props}>
       <Header>
@@ -20,7 +25,7 @@ export const Card = ({ children, title, languages, description, color, githubRef
         <p>{description}</p>
         <Buttons>
           <a type="button" className="btn btn-primary" href={githubRef} target='_blanck'>Github Repo</a>
-          <a type="button" className="btn btn-primary" href='#'>About This Project</a>
+          <a type="button" className="btn btn-primary" href='#'>{language.projectButton}</a>
         </Buttons>
       </Body>
       <Folder color={color} />

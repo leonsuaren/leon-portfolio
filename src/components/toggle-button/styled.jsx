@@ -35,3 +35,8 @@ export const Span = styled.span`
   font-family: ${GlobalStyled.typography.primaryFont};
   font-size: 1.2rem;
 `;
+
+export const Img = styled.img`
+  width: 20px;
+  height: 20px;
+`;

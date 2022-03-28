@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { ToggleWrapper, Notch, Toggle, Span } from './styled';
+import { ToggleWrapper, Notch, Toggle, Span, Img } from './styled';
 import { LanguageContext } from '../../context';
 
 export const ToggleButton = () => {
@@ -17,7 +17,7 @@ export const ToggleButton = () => {
       <Span className='me-3 py-2'>En</Span>
       <Toggle onClick={onSwitch}>
       <Notch  isActive={isActive}>
-        <img src={isActive ? 'usa-flag.jpg' : 'mex-flag.jpeg'}/>
+        <Img src={isActive ? 'mex-flag.jpg' : 'usa-flag.jpeg'}/>
       </Notch>
       </Toggle>
       <Span className='me-3 py-2'>Sp</Span>

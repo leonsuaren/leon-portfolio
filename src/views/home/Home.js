@@ -67,7 +67,7 @@ export const Home = () => {
           <YouTubelLink className="link-button-style youtube-link" href='#' target='_blank' rel="noreferrer"><AiOutlineYoutube /></YouTubelLink>
         </div>
         <Link to='resume'>
-          <ResumeButton>{language.resume}</ResumeButton>
+          <ResumeButton disabled>{language.resume}</ResumeButton>
         </Link>
       </div>
     </main>

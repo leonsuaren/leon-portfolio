@@ -16,7 +16,7 @@ body {
     .mainHomeContainer {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      align-items: start;
+      align-items: center;
       justify-items: center;
       opacity: 0;
     }
@@ -52,7 +52,6 @@ body {
     .gmail-link {
       background-color: #ff0100;
       color: aliceblue;
-
     }
 
     .gmail-link:hover {
@@ -72,7 +71,7 @@ body {
       position: absolute;
       top: 680px;
       left: 1430px;
-      display: 'inline-block';
+      display: "inline-block";
     }
 
     .popper-text {
@@ -87,6 +86,8 @@ body {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 300px 1000px;
+      align-items: center;
+      justify-items: center;
     }
     .bio-grid {
       display: grid;
@@ -137,7 +138,7 @@ body {
       position: absolute;
       top: 1320px;
       left: 10px;
-      display: 'inline-block'
+      display: "inline-block";
     }
   }
 }
@@ -151,4 +152,3 @@ body {
   color: #cccccc;
   font-size: 3rem;
 }
-

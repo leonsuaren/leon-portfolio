@@ -29,6 +29,9 @@ export const Notch = styled.div`
   background: white;
   transition: transform 0.1s linear;
   transform: translate(${ props => props.isActive ? '26px' : '1px' });
+  display: flex;
+  justify-content: center;
+  align-content: center;
 `;
 
 export const Span = styled.span`
@@ -39,4 +42,7 @@ export const Span = styled.span`
 export const Img = styled.img`
   width: 20px;
   height: 20px;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
 `;

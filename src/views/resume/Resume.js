@@ -34,6 +34,27 @@ export const Resume = () => {
         targets: '.input-percentage',
         color: '#4e5060'
       })
+      anime.timeline({
+        targets: '.bar-english-animation',
+        width: '90%',
+        easing: 'easeInOutQuad',
+        duration: 3000
+      })
+        .add({
+          targets: '.bar-english-animation',
+          background: '#93f756'
+        })
+      anime.timeline({
+        targets: '.input-english-percentage',
+        value: [0, 90],
+        round: 1,
+        easing: 'easeInOutQuad',
+        duration: 3000
+      })
+        .add({
+          targets: '.input-english-percentage',
+          color: '#4e5060'
+        })
   }, []);
 
 
@@ -72,13 +93,14 @@ export const Resume = () => {
             <ProgresiveBarWrapper>
               <Bar className='bar-animation'></Bar>
             </ProgresiveBarWrapper>
-            <InputPercentage className='input-percentage' value='0%' disabled></InputPercentage>
+            <InputPercentage className='input-percentage' value='0%' disabled />
           </LanguageWrapper>
           <LanguageWrapper>
             <h5>English</h5>
             <ProgresiveBarWrapper>
-              <Bar ></Bar>
+              <Bar className='bar-english-animation'></Bar>
             </ProgresiveBarWrapper>
+            <InputPercentage className='input-english-percentage' value='0%' disabled />
           </LanguageWrapper>
         </Languages>
         <Education>

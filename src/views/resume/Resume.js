@@ -1,4 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
+import { LanguageContext } from '../../context';
+
 import {
   Container, Grid, Programing, Personal, Para, Span, SpanContainer, Title, Projects, Languages, Education, SoftSkills, DownloadButton, ResumeButton,
   LanguageWrapper, ProgresiveBarWrapper, Bar, InputPercentage, PrograminSquare, Circle, NumberWrapper, SvgWrapper, PercentageWrapper, SkillTitle
@@ -9,6 +11,8 @@ import { paginationAnimation, progressiveBarAnimation } from '../../global';
 import anime from 'animejs';
 
 export const Resume = () => {
+  const languageContext = useContext(LanguageContext);
+  const language = languageContext.language;
 
   useEffect(() => {
     paginationAnimation();
@@ -46,7 +50,7 @@ export const Resume = () => {
       easing: 'easeInOutQuad'
     });
 
-  }, []);
+  }, [language]);
   // calc(440 - (440 * ${props => props.percentage}) / 100)
   return (
     <Container className='animation'>
@@ -96,16 +100,16 @@ export const Resume = () => {
           <Title>projects</Title>
         </Projects>
         <Languages>
-          <Title>Languages</Title>
+          <Title>{language.languagesTitle}</Title>
           <LanguageWrapper>
-            <h5>Spanish</h5>
+            <h5>{language.languageOne}</h5>
             <ProgresiveBarWrapper>
               <Bar className='bar-animation'></Bar>
             </ProgresiveBarWrapper>
             <InputPercentage className='input-percentage' value='0%' disabled />
           </LanguageWrapper>
           <LanguageWrapper>
-            <h5>English</h5>
+            <h5>{language.languageTwo}</h5>
             <ProgresiveBarWrapper>
               <Bar className='bar-english-animation'></Bar>
             </ProgresiveBarWrapper>

@@ -52,7 +52,6 @@ export const ProgressiveCirculeWrapper = styled.div`
 
 export const Circle = styled.circle`
   fill: none;
-  stroke-width: 10px;
   stroke: #CCCCCC;
   transform: translate(25px, 15px);
   stroke-dasharray: 440;
@@ -66,6 +65,7 @@ export const Circle = styled.circle`
   :nth-child(2) {
     stroke-dashoffset: 440;
     stroke: ${props => props.color};
+    stroke-width: 10px;
   }
 `;
 

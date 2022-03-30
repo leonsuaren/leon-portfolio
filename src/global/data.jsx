@@ -17,7 +17,10 @@ export const english = {
   ],
   projectButton: 'About this Project',
   contactTitle: 'Contact Me',
-  contactSlogan: 'Get in touch, we can code something together!!'
+  contactSlogan: 'Get in touch, we can code something together!!',
+  languagesTitle: 'Languages',
+  languageOne: 'Spanish',
+  languageTwo: 'English'
 }
 
 export const spanish = {
@@ -39,5 +42,8 @@ export const spanish = {
  ],
   projectButton: 'Detalles',
   contactTitle: 'Contacto',
-  contactSlogan: 'Ponte en contacto, Podemos programar algo juntos!!'
+  contactSlogan: 'Ponte en contacto, Podemos programar algo juntos!!',
+  languagesTitle: 'Idiomas',
+  languageOne: 'Español',
+  languageTwo: 'Ingles'
 }

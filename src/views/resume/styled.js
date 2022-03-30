@@ -97,7 +97,7 @@ export const Languages = styled.div`
 
 export const LanguageWrapper = styled.div`
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 20% 70% 10%;
   align-items: center;
   justify-items: center;
   color: ${GlobalStyled.fontColor.primaryColor};
@@ -116,10 +116,18 @@ export const ProgresiveBarWrapper = styled.div`
 `;
 
 export const Bar = styled.div`
-  width: ${props => props.percentage + '%'};
+  width: 0;
   height: 10px;
   border-radius: 15px;
-  background-color: #4fefaf;
+  background-color: #e51239;
+`;
+
+export const InputPercentage = styled.input`
+  background-color: transparent;
+  width: 50px;
+  border: none;
+  color: #e51239;
+  font-weight: bold;
 `;
 //=====Languages End======
 //=====Education Start=====

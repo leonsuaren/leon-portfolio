@@ -1,15 +1,39 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Grid, Programing, Personal, Para, Span, SpanContainer, Title, Projects, Languages, Education, SoftSkills, DownloadButton, ResumeButton, 
-  LanguageWrapper, ProgresiveBarWrapper, Bar
+import {
+  Container, Grid, Programing, Personal, Para, Span, SpanContainer, Title, Projects, Languages, Education, SoftSkills, DownloadButton, ResumeButton,
+  LanguageWrapper, ProgresiveBarWrapper, Bar, InputPercentage
 
 } from './styled';
 import { paginationAnimation } from '../../global';
+
+import anime from 'animejs';
 
 export const Resume = () => {
   const [percentage, setPercentage] = useState(0);
 
   useEffect(() => {
     paginationAnimation();
+    anime.timeline({
+      targets: '.bar-animation',
+      width: '100%',
+      easing: 'easeInOutQuad',
+      duration: 3000
+    })
+      .add({
+        targets: '.bar-animation',
+        background: '#4fefaf'
+      })
+    anime.timeline({
+      targets: '.input-percentage',
+      value: [0, 100],
+      round: 1,
+      easing: 'easeInOutQuad',
+      duration: 3000
+    })
+      .add({
+        targets: '.input-percentage',
+        color: '#4e5060'
+      })
   }, []);
 
 
@@ -44,15 +68,16 @@ export const Resume = () => {
         <Languages>
           <Title>Languages</Title>
           <LanguageWrapper>
-            <h5>spanish</h5>
+            <h5>Spanish</h5>
             <ProgresiveBarWrapper>
-              <Bar percentage={100}></Bar>
+              <Bar className='bar-animation'></Bar>
             </ProgresiveBarWrapper>
+            <InputPercentage className='input-percentage' value='0%' disabled></InputPercentage>
           </LanguageWrapper>
           <LanguageWrapper>
-            <h5>english</h5>
+            <h5>English</h5>
             <ProgresiveBarWrapper>
-            <Bar percentage={90}></Bar>
+              <Bar ></Bar>
             </ProgresiveBarWrapper>
           </LanguageWrapper>
         </Languages>

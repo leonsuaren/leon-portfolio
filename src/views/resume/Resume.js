@@ -18,6 +18,7 @@ export const Resume = () => {
       value: [0, 90],
       round: 1,
       easing: 'easeInOutQuad',
+      delay: 500,
       duration: 3000
     })
     anime({
@@ -25,12 +26,28 @@ export const Resume = () => {
       value: [0, 85],
       round: 1,
       easing: 'easeInOutQuad',
+      delay: 500,
       duration: 3000
     })
-  
-  }, []);
-//calc(440 - (440 * 87) / 100)
 
+    anime({
+      targets: '.circle-animation-css',
+      strokeDashoffset: [anime.setDashoffset, `${66}`],
+      delay: 500,
+      duration: 3000,
+      easing: 'easeInOutQuad'
+    });
+
+    anime({
+      targets: '.circle-animation-javascript',
+      strokeDashoffset: [anime.setDashoffset, `${44}`],
+      delay: 500,
+      duration: 3000,
+      easing: 'easeInOutQuad'
+    });
+
+  }, []);
+  // calc(440 - (440 * ${props => props.percentage}) / 100)
   return (
     <Container className='animation'>
       <Grid>
@@ -39,9 +56,9 @@ export const Resume = () => {
             <PercentageWrapper>
               <SvgWrapper>
                 <Circle cx='70' cy='70' r='70'></Circle>
-                <Circle className='circle-animation' cx='70' cy='70' r='70' percentage={90}></Circle>
+                <Circle className='circle-animation-javascript' cx='70' cy='70' r='70' color={'#03a9f4'}></Circle>
               </SvgWrapper>
-                <NumberWrapper className='percentage-value-animation-javascript' disabled value='0%' />
+              <NumberWrapper className='percentage-value-animation-javascript' disabled value='0%' />
             </PercentageWrapper>
             <SkillTitle>JavaScript</SkillTitle>
           </PrograminSquare>
@@ -49,9 +66,9 @@ export const Resume = () => {
             <PercentageWrapper>
               <SvgWrapper>
                 <Circle cx='70' cy='70' r='70'></Circle>
-                <Circle className='circle-animation' cx='70' cy='70' r='70' percentage={85}></Circle>
+                <Circle className='circle-animation-css' cx='70' cy='70' r='70' color={'#E6F280'}></Circle>
               </SvgWrapper>
-                <NumberWrapper className='percentage-value-animation-css' disabled value='0%' />
+              <NumberWrapper className='percentage-value-animation-css' disabled value='0%' />
             </PercentageWrapper>
             <SkillTitle>CSS</SkillTitle>
           </PrograminSquare>

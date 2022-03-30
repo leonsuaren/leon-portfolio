@@ -64,8 +64,8 @@ export const Circle = styled.circle`
     stroke-width: 15px;
   }
   :nth-child(2) {
-    stroke-dashoffset: calc(440 - (440 * ${props => props.percentage}) / 100);
-    stroke: #03a9f4;
+    stroke-dashoffset: 440;
+    stroke: ${props => props.color};
   }
 `;
 
@@ -82,7 +82,7 @@ export const NumberWrapper = styled.input`
   background-color: transparent;
   width: 100px;
   border: none;
-  color: #CCCCCC;
+  color: ${GlobalStyled.fontColor.primaryColor};
   font-weight: bold;
   position: relative;
   top: -150px;

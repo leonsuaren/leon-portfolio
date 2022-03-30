@@ -14,6 +14,7 @@ export const progressiveBarAnimation = () => {
     targets: '.bar-animation',
     width: '100%',
     easing: 'easeInOutQuad',
+    delay: 500,
     duration: 3000
   })
     .add({
@@ -25,6 +26,7 @@ export const progressiveBarAnimation = () => {
     value: [0, 100],
     round: 1,
     easing: 'easeInOutQuad',
+    delay: 500,
     duration: 3000
   })
     .add({
@@ -35,6 +37,7 @@ export const progressiveBarAnimation = () => {
       targets: '.bar-english-animation',
       width: '90%',
       easing: 'easeInOutQuad',
+      delay: 500,
       duration: 3000
     })
       .add({
@@ -46,6 +49,7 @@ export const progressiveBarAnimation = () => {
       value: [0, 90],
       round: 1,
       easing: 'easeInOutQuad',
+      delay: 500,
       duration: 3000
     })
       .add({

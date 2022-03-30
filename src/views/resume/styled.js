@@ -27,10 +27,72 @@ export const Programing = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
+  gap: 5px;
   padding: 0px 20px;
-  background-color: aliceblue;
   align-content: center;
   justify-content: center;
+`;
+export const PrograminSquare = styled.div`
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 90% 10%;
+  justify-items: center;
+  align-items: center;
+  padding: 10px;
+  background-color: aliceblue;
+`;
+
+export const ProgressiveCirculeWrapper = styled.div`
+  height: 250px;
+  width: 250px;
+  position: relative;
+  border: solid green 1px;
+`;
+
+export const Circle = styled.circle`
+  fill: none;
+  stroke-width: 10px;
+  stroke: #CCCCCC;
+  transform: translate(25px, 15px);
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  stroke-linecap: round;
+  :nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: ${GlobalStyled.fontColor.primaryColor};
+    stroke-width: 15px;
+  }
+  :nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * ${props => props.percentage}) / 100);
+    stroke: #03a9f4;
+  }
+`;
+
+export const PercentageWrapper = styled.div`
+  height: 150px;
+`;
+
+export const SvgWrapper = styled.svg`
+  width: 200px;
+  height: 200px;
+`;
+
+export const NumberWrapper = styled.input`
+  background-color: transparent;
+  width: 100px;
+  border: none;
+  color: #CCCCCC;
+  font-weight: bold;
+  position: relative;
+  top: -150px;
+  left: 50px;
+  font-weight: bold;
+  font-size: 2.5rem;
+`;
+
+export const SkillTitle = styled.h4`
+  color: ${GlobalStyled.fontColor.primaryColor};
 `;
 //=====Programin Ends=====
 //====Personal Start====

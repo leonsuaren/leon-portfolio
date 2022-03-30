@@ -1,24 +1,60 @@
 import React, { useEffect } from 'react';
 import {
   Container, Grid, Programing, Personal, Para, Span, SpanContainer, Title, Projects, Languages, Education, SoftSkills, DownloadButton, ResumeButton,
-  LanguageWrapper, ProgresiveBarWrapper, Bar, InputPercentage
+  LanguageWrapper, ProgresiveBarWrapper, Bar, InputPercentage, PrograminSquare, Circle, NumberWrapper, SvgWrapper, PercentageWrapper, SkillTitle
 
 } from './styled';
 import { paginationAnimation, progressiveBarAnimation } from '../../global';
+
+import anime from 'animejs';
 
 export const Resume = () => {
 
   useEffect(() => {
     paginationAnimation();
     progressiveBarAnimation();
+    anime({
+      targets: '.percentage-value-animation-javascript',
+      value: [0, 90],
+      round: 1,
+      easing: 'easeInOutQuad',
+      duration: 3000
+    })
+    anime({
+      targets: '.percentage-value-animation-css',
+      value: [0, 85],
+      round: 1,
+      easing: 'easeInOutQuad',
+      duration: 3000
+    })
+  
   }, []);
-
+//calc(440 - (440 * 87) / 100)
 
   return (
     <Container className='animation'>
       <Grid>
         <Programing>
-          Programing Skills
+          <PrograminSquare>
+            <PercentageWrapper>
+              <SvgWrapper>
+                <Circle cx='70' cy='70' r='70'></Circle>
+                <Circle className='circle-animation' cx='70' cy='70' r='70' percentage={90}></Circle>
+              </SvgWrapper>
+                <NumberWrapper className='percentage-value-animation-javascript' disabled value='0%' />
+            </PercentageWrapper>
+            <SkillTitle>JavaScript</SkillTitle>
+          </PrograminSquare>
+          <PrograminSquare>
+            <PercentageWrapper>
+              <SvgWrapper>
+                <Circle cx='70' cy='70' r='70'></Circle>
+                <Circle className='circle-animation' cx='70' cy='70' r='70' percentage={85}></Circle>
+              </SvgWrapper>
+                <NumberWrapper className='percentage-value-animation-css' disabled value='0%' />
+            </PercentageWrapper>
+            <SkillTitle>CSS</SkillTitle>
+          </PrograminSquare>
         </Programing>
         <Personal>
           <Title>personal information </Title>

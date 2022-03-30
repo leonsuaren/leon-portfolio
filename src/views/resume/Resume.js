@@ -1,60 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import {
   Container, Grid, Programing, Personal, Para, Span, SpanContainer, Title, Projects, Languages, Education, SoftSkills, DownloadButton, ResumeButton,
   LanguageWrapper, ProgresiveBarWrapper, Bar, InputPercentage
 
 } from './styled';
-import { paginationAnimation } from '../../global';
-
-import anime from 'animejs';
+import { paginationAnimation, progressiveBarAnimation } from '../../global';
 
 export const Resume = () => {
-  const [percentage, setPercentage] = useState(0);
 
   useEffect(() => {
     paginationAnimation();
-    anime.timeline({
-      targets: '.bar-animation',
-      width: '100%',
-      easing: 'easeInOutQuad',
-      duration: 3000
-    })
-      .add({
-        targets: '.bar-animation',
-        background: '#4fefaf'
-      })
-    anime.timeline({
-      targets: '.input-percentage',
-      value: [0, 100],
-      round: 1,
-      easing: 'easeInOutQuad',
-      duration: 3000
-    })
-      .add({
-        targets: '.input-percentage',
-        color: '#4e5060'
-      })
-      anime.timeline({
-        targets: '.bar-english-animation',
-        width: '90%',
-        easing: 'easeInOutQuad',
-        duration: 3000
-      })
-        .add({
-          targets: '.bar-english-animation',
-          background: '#93f756'
-        })
-      anime.timeline({
-        targets: '.input-english-percentage',
-        value: [0, 90],
-        round: 1,
-        easing: 'easeInOutQuad',
-        duration: 3000
-      })
-        .add({
-          targets: '.input-english-percentage',
-          color: '#4e5060'
-        })
+    progressiveBarAnimation();
   }, []);
 
 

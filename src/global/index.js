@@ -1,3 +1,3 @@
 export { GlobalStyled } from './GlobalStyled';
-export { paginationAnimation } from './anime';
+export { paginationAnimation, progressiveBarAnimation } from './anime';
 export { english, spanish } from './data';

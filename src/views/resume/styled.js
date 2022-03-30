@@ -94,6 +94,33 @@ export const Languages = styled.div`
   align-content: center;
   justify-content: center;
 `;
+
+export const LanguageWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 20% 80%;
+  align-items: center;
+  justify-items: center;
+  color: ${GlobalStyled.fontColor.primaryColor};
+`;
+
+export const ProgresiveBarWrapper = styled.div`
+  width: 90%;
+  height: 20px;
+  border-radius: 15px;
+  background-color: ${GlobalStyled.fontColor.primaryColor};
+  display: grid;
+  grid-template-columns: 100%;
+  align-items: center;
+  justify-items: start;
+  padding: 5px;
+`;
+
+export const Bar = styled.div`
+  width: ${props => props.percentage + '%'};
+  height: 10px;
+  border-radius: 15px;
+  background-color: #4fefaf;
+`;
 //=====Languages End======
 //=====Education Start=====
 export const Education = styled.div`

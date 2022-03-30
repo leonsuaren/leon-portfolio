@@ -1,13 +1,17 @@
-import React, { useEffect }from 'react';
-import { Container, Grid, Programing, Personal, Para, Span, SpanContainer, Title, Projects, Languages, Education, SoftSkills, DownloadButton, ResumeButton } from './styled';
+import React, { useEffect, useState } from 'react';
+import { Container, Grid, Programing, Personal, Para, Span, SpanContainer, Title, Projects, Languages, Education, SoftSkills, DownloadButton, ResumeButton, 
+  LanguageWrapper, ProgresiveBarWrapper, Bar
+
+} from './styled';
 import { paginationAnimation } from '../../global';
 
 export const Resume = () => {
-
+  const [percentage, setPercentage] = useState(0);
 
   useEffect(() => {
     paginationAnimation();
   }, []);
+
 
   return (
     <Container className='animation'>
@@ -38,13 +42,25 @@ export const Resume = () => {
           <Title>projects</Title>
         </Projects>
         <Languages>
-        <Title>Languages</Title>
+          <Title>Languages</Title>
+          <LanguageWrapper>
+            <h5>spanish</h5>
+            <ProgresiveBarWrapper>
+              <Bar percentage={100}></Bar>
+            </ProgresiveBarWrapper>
+          </LanguageWrapper>
+          <LanguageWrapper>
+            <h5>english</h5>
+            <ProgresiveBarWrapper>
+            <Bar percentage={90}></Bar>
+            </ProgresiveBarWrapper>
+          </LanguageWrapper>
         </Languages>
         <Education>
-        <Title>Education</Title>
+          <Title>Education</Title>
         </Education>
         <SoftSkills>
-        <Title>Soft Skills</Title>
+          <Title>Soft Skills</Title>
         </SoftSkills>
         <DownloadButton>
           <ResumeButton>Download My Resume</ResumeButton>

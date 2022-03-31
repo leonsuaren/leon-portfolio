@@ -76,6 +76,16 @@ export const Resume = () => {
             </PercentageWrapper>
             <SkillTitle>CSS</SkillTitle>
           </PrograminSquare>
+          <PrograminSquare>
+            <PercentageWrapper>
+              <SvgWrapper>
+                <Circle cx='70' cy='70' r='70'></Circle>
+                <Circle className='circle-animation-html' cx='70' cy='70' r='70' color={'#5aedb2'}></Circle>
+              </SvgWrapper>
+              <NumberWrapper className='percentage-value-animation-html' disabled value='0%' />
+            </PercentageWrapper>
+            <SkillTitle>HTML</SkillTitle>
+          </PrograminSquare>
         </Programing>
         <Personal>
           <Title>personal information </Title>

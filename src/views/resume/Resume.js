@@ -26,6 +26,13 @@ export const Resume = () => {
       duration: 3000
     })
     anime({
+      targets: '.circle-animation-javascript',
+      strokeDashoffset: [anime.setDashoffset, `${44}`],
+      delay: 500,
+      duration: 3000,
+      easing: 'easeInOutQuad'
+    });
+    anime({
       targets: '.percentage-value-animation-css',
       value: [0, 85],
       round: 1,
@@ -33,7 +40,6 @@ export const Resume = () => {
       delay: 500,
       duration: 3000
     })
-
     anime({
       targets: '.circle-animation-css',
       strokeDashoffset: [anime.setDashoffset, `${66}`],
@@ -41,14 +47,22 @@ export const Resume = () => {
       duration: 3000,
       easing: 'easeInOutQuad'
     });
-
     anime({
-      targets: '.circle-animation-javascript',
+      targets: '.percentage-value-animation-html',
+      value: [0, 90],
+      round: 1,
+      easing: 'easeInOutQuad',
+      delay: 500,
+      duration: 3000
+    })
+    anime({
+      targets: '.circle-animation-html',
       strokeDashoffset: [anime.setDashoffset, `${44}`],
       delay: 500,
       duration: 3000,
       easing: 'easeInOutQuad'
     });
+
 
   }, [language]);
   // calc(440 - (440 * ${props => props.percentage}) / 100)

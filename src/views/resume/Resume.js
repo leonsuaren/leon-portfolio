@@ -62,6 +62,36 @@ export const Resume = () => {
       duration: 3000,
       easing: 'easeInOutQuad'
     });
+    anime({
+      targets: '.percentage-value-animation-react',
+      value: [0, 90],
+      round: 1,
+      easing: 'easeInOutQuad',
+      delay: 500,
+      duration: 3000
+    })
+    anime({
+      targets: '.circle-animation-react',
+      strokeDashoffset: [anime.setDashoffset, `${44}`],
+      delay: 500,
+      duration: 3000,
+      easing: 'easeInOutQuad'
+    });
+    anime({
+      targets: '.percentage-value-animation-express',
+      value: [0, 90],
+      round: 1,
+      easing: 'easeInOutQuad',
+      delay: 500,
+      duration: 3000
+    })
+    anime({
+      targets: '.circle-animation-express',
+      strokeDashoffset: [anime.setDashoffset, `${44}`],
+      delay: 500,
+      duration: 3000,
+      easing: 'easeInOutQuad'
+    });
 
 
   }, [language]);
@@ -104,11 +134,21 @@ export const Resume = () => {
             <PercentageWrapper>
               <SvgWrapper>
                 <Circle cx='70' cy='70' r='70'></Circle>
-                <Circle className='circle-animation-html' cx='70' cy='70' r='70' color={'#6270ea'}></Circle>
+                <Circle className='circle-animation-react' cx='70' cy='70' r='70' color={'#6270ea'}></Circle>
               </SvgWrapper>
-              <NumberWrapper className='percentage-value-animation-html' disabled value='0%' />
+              <NumberWrapper className='percentage-value-animation-react' disabled value='0%' />
             </PercentageWrapper>
             <SkillTitle>React</SkillTitle>
+          </PrograminSquare>
+          <PrograminSquare>
+            <PercentageWrapper>
+              <SvgWrapper>
+                <Circle cx='70' cy='70' r='70'></Circle>
+                <Circle className='circle-animation-express' cx='70' cy='70' r='70' color={'#e51239'}></Circle>
+              </SvgWrapper>
+              <NumberWrapper className='percentage-value-animation-express' disabled value='0%' />
+            </PercentageWrapper>
+            <SkillTitle>Express</SkillTitle>
           </PrograminSquare>
         </Programing>
         <Personal>
